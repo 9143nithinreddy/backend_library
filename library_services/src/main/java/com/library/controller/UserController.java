@@ -23,11 +23,12 @@ public class UserController {
     public String registerUser(@RequestBody User user) {
         return userService.registerUser(user);
     }
-
+          
     @PostMapping("/login")
     public String loginUser(@RequestBody Map<String, String> loginData) {
         String username = loginData.get("username");
         String password = loginData.get("password");
         return userService.loginUser(username, password);
+        //learned a lot actually
     }
 }
