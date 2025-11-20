@@ -16,7 +16,7 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
         this.userService.createDefaultAdmin(); // Create admin on startup
-        // this is running everytime running
+        // this is running everytime running need to upgrade
     }
 
     @PostMapping("/register")
