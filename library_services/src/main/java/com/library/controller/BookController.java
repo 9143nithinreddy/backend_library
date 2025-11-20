@@ -36,7 +36,7 @@ public class BookController {
     public ResponseEntity<?> getBookById(@PathVariable Long id) {
         Book book = bookRepo.findById(id).orElse(null);
 
-        if (book == null) {
+        if (book == null) { // response is working
             return ResponseEntity.status(404).body("Book not found");
         }
 
